@@ -2052,12 +2052,12 @@ matchpipe.push(  {
     //sahil apk download
     async downloadApp(req, res) {
         try {
-            let file = './public/apk/CricketEmpire.apk'
+            let file = './public/apk/DemoFantasy.apk'
             if (req.query.refercode) {
                 let data = req.query.refercode;
-                res.download(file, `CricketEmpire_${data}.apk`);
+                res.download(file, `DemoFantasy_${data}.apk`);
             } else {
-                res.download(file, `CricketEmpire-app.apk`);
+                res.download(file, `DemoFantasy-app.apk`);
             }
 
         } catch (error) {
@@ -3576,7 +3576,7 @@ matchpipe.push(  {
                                     "",
                                 ],
                             },
-                            then: "https://admin.CricketEmpire.com/avtar1.png",
+                            then: "https://admin.DemoFantasy.com/avtar1.png",
                             else: {
                                 $getField: {
                                     field: "image",

@@ -36,7 +36,7 @@ switch (ENVIRONMENT) {
 
 const credentials = {
   DB_URL: process.env.DB_URL || "mongodb://127.0.0.1:27017/",
-  DB_NAME: process.env.DB_NAME || "CricketEmpire",
+  DB_NAME: process.env.DB_NAME || "DemoFantasy",
   appName: appName,
   SECRET_TOKEN: process.env.SECRET_TOKEN,
   BASE_URL: process.env.BASE_URL,
@@ -45,7 +45,7 @@ const credentials = {
   PORT: process.env.PORT || 7777,
   PORT_api: process.env.PORT_api || 3333,
   CRON_PORT: process.env.CRON_PORT || 3636,
-  APP_NAME: process.env.APP_NAME || "CricketEmpire",
+  APP_NAME: process.env.APP_NAME || "DemoFantasy",
   APP_SHORT_NAME: process.env.APP_SHORT_NAME || "G11",
   DEFAULT_IMAGE_FOR_PRODUCT: "default_product.png",
   DEFAULT_IMAGE_FOR_TICKET: "default_product.png",

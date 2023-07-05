@@ -1877,7 +1877,7 @@ let a=[];
                                 ],
                             },
                             then: "$userdata.image",
-                            else: "https://admin.CricketEmpire.com/default_profile.png",
+                            else: "https://admin.DemoFantasy.com/default_profile.png",
                         },
                     },
                 }
@@ -1909,7 +1909,7 @@ let a=[];
                     image: {
                         $ifNull: [
                             "$image",
-                            "https://admin.cricketEmpire.com/user.png",
+                            "https://admin.DemoFantasy.com/user.png",
                         ],
                     },
                     teamnumber: {

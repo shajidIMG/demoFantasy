@@ -34,13 +34,13 @@ module.exports = class SMS {
         if (process.env.NODE_ENV != 'prod') return true;
         console.log("---mobile--and otp",mobile ,"..message--",message,"--process.env.BULKSMS_AUTH_KEY---",process.env.BULKSMS_AUTH_KEY,"--process.env.BULKSMS_SENDER--",process.env.BULKSMS_SENDER,"--process.env.BULKSMS_ROUTE--",process.env.BULKSMS_ROUTE)
         let payload ={
-            "campaign_name" : 'CricketEmpire', 
+            "campaign_name" : 'DemoFantasy', 
             "auth_key" : process.env.BULKSMS_AUTH_KEY, 
             "receivers"  : Number(mobile), 
             "sender"  : process.env.BULKSMS_SENDER, 
             "route"  : 'TR', 
             "message"  : {
-                //   "msgdata" : "Dear Customer 1234 CricketEmpire OTP.",
+                //   "msgdata" : "Dear Customer 1234 DemoFantasy OTP.",
                   "msgdata" : message,
                   "Template_ID" : process.env.Template_ID,
                   'coding' : 1

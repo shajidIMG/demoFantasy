@@ -1182,7 +1182,7 @@ let date = moment(listmatch.start_date, "YYYY-MM-DD HH:mm:ss").subtract(0, 'minu
                                     message: 'successfully update details'
                                 }
                             } else {
-                              let filePath = `https://admin.CricketEmpire.com/${req.body.typename}/${req.file.filename}`;
+                              let filePath = `https://admin.DemoFantasy.com/${req.body.typename}/${req.file.filename}`;
                               if(fs.existsSync(filePath) == true){
                                   fs.unlinkSync(filePath);
                               } 

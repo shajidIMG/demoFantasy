@@ -244,7 +244,7 @@ class UserServices {
 			}
 			const sms = new SMS(req.body.mobile);
 			sms.otp = 1234
-			await sms.sendSMS(sms.mobile, `Dear Customer ${sms.otp} CricketEmpire OTP.`);
+			await sms.sendSMS(sms.mobile, `Dear Customer ${sms.otp} DemoFantasy OTP.`);
 			let tempuser = await this.findTempUser(obj);
 			console.log('tempuser---->', tempuser);
 			if (tempuser.length > 0) {
@@ -453,7 +453,7 @@ class UserServices {
 			console.log("----sms.otp---", sms.otp, "--constant.APP_NAME---", constant.APP_NAME, "--")
 			const otpsent = await sms.sendSMS(
 				sms.mobile,
-				`Dear Customer ${sms.otp} CricketEmpire OTP.`
+				`Dear Customer ${sms.otp} DemoFantasy OTP.`
 			);
 			console.log("--otpsent---", otpsent);
 			let userUpdated = await userModel.findOneAndUpdate({ mobile: req.body.mobile }, { code: sms.otp }, { new: true });
@@ -1217,7 +1217,7 @@ class UserServices {
 			await userModel.updateOne({ _id: hasuser._id }, { code: sms.otp });
 			await sms.sendSMS(
 				sms.mobile,
-				`Dear Customer ${sms.otp} CricketEmpire OTP.`
+				`Dear Customer ${sms.otp} DemoFantasy OTP.`
 				// `${sms.otp} is the OTP for your ${constant.APP_NAME} account. NEVER SHARE YOUR OTP WITH ANYONE. ${constant.APP_NAME} will never call or message to ask for the OTP.`
 			);
 			return {
@@ -1232,7 +1232,7 @@ class UserServices {
 			await userModel.updateOne({ _id: hasuser._id }, { code: mail.otp });
 			await mail.sendMail(
 				mail.email,
-				`Dear Customer ${mail.otp} CricketEmpire OTP.`,
+				`Dear Customer ${mail.otp} DemoFantasy OTP.`,
 				`Reset Password Otp`
 			);
 			return {
@@ -1471,7 +1471,7 @@ class UserServices {
 				url = item.url
 			}
 			if (item.image) {
-				//const BASE_URL = "https://admin.CricketEmpire.com"
+				//const BASE_URL = "https://admin.DemoFantasy.com"
 				image = `${process.env.BASE_URL}${item.image}`
 			}
 			return {
@@ -1525,7 +1525,7 @@ class UserServices {
 				};
 			}
 			const sms = new SMS(tempUser[0].mobile);
-			await sms.sendSMS(sms.mobile, `Dear Customer ${sms.otp} CricketEmpire OTP.`);
+			await sms.sendSMS(sms.mobile, `Dear Customer ${sms.otp} DemoFantasy OTP.`);
 			/*await sms.sendSMS(
 			  sms.mobile,
 			  sms.otp
@@ -1550,7 +1550,7 @@ class UserServices {
 			}
 			const sms = new SMS(user[0].mobile);
 			await userModel.updateOne({ _id: user[0]._id }, { code: sms.otp });
-			await sms.sendSMS(sms.mobile, `Dear Customer ${sms.otp} CricketEmpire OTP.`);
+			await sms.sendSMS(sms.mobile, `Dear Customer ${sms.otp} DemoFantasy OTP.`);
 			/*await sms.sendSMS(
 			  sms.mobile,
 			  sms.otp
@@ -1578,7 +1578,7 @@ class UserServices {
 			await userModel.updateOne({ _id: user[0]._id }, { code: mail.otp });
 			await mail.sendMail(
 				mail.email,
-				`Dear Customer ${mail.otp} CricketEmpire OTP.`,
+				`Dear Customer ${mail.otp} DemoFantasy OTP.`,
 				`Resend Otp`
 			);
 			return {
@@ -1622,7 +1622,7 @@ class UserServices {
 		}
 		const sms = new SMS(req.body.mobile);
 		await userModel.updateOne({ _id: req.user._id }, { code: sms.otp });
-		await sms.sendSMS(sms.mobile, `Dear Customer ${sms.otp} CricketEmpire OTP.`);
+		await sms.sendSMS(sms.mobile, `Dear Customer ${sms.otp} DemoFantasy OTP.`);
 		/*  await sms.sendSMS(
 			sms.mobile,
 			sms.otp
@@ -1672,7 +1672,7 @@ class UserServices {
 		await userModel.updateOne({ _id: req.user._id }, { code: mail.otp });
 		await mail.sendMail(
 			mail.email,
-			`Dear Customer ${mail.otp} CricketEmpire OTP.`,
+			`Dear Customer ${mail.otp} DemoFantasy OTP.`,
 			`Email Verification Process`
 		);
 

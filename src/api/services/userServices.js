@@ -3257,7 +3257,7 @@ class UserServices {
 		for (let data of result) {
 			data.image = data.image != "" ? data.image : `${constant.BASE_URL}avtar1.png`
 			data._doc.amount = 0;
-			data._doc.message = "Signed up Cricket Empire"
+			data._doc.message = "Signed up Demo Fantasy"
 		}
 
 		return {

@@ -379,7 +379,7 @@ class youtuberServices{
             transactiondata['type'] = 'Affiliate Commission';
             transactiondata['amount'] = Number(total_profit);
             transactiondata['transaction_id'] = 'G11-YP-'+Date.now();
-            transactiondata['transaction_by'] = 'Cricket Empire';
+            transactiondata['transaction_by'] = 'Demo Fantasy';
             transactiondata['challengeid'] = challenge_id;
             transactiondata['userid'] = refer_id;
             transactiondata['paymentstatus'] = 'confirmed';

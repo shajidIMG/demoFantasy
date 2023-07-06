@@ -164,10 +164,10 @@ class matchController {
                             //console.log("team1",team1._doc,"team2",team2.logo)
                             // let team1logo = `<img src=${team1.logo ? `${team1.logo}` : 'team_image.png'} class="w-40px view_team_table_images2 h-40px rounded-pill">`;
                             // let team2logo = `<img src=${team2.logo ? `${team2.logo}` : 'team_image.png'} class="w-40px view_team_table_images2 h-40px rounded-pill">`;
-                            // let team1logo = `<img src="${process.env.BASE_URL}/${team1.logo ? "logo.png" : "logo.png"}" class="w-40px view_team_table_images2 h-40px rounded-pill">`;
-                            // let team2logo = `<img src="${process.env.BASE_URL}/${team2.logo ? "logo.png"  : "logo.png" }" class="w-40px view_team_table_images2 h-40px rounded-pill">`;
-                            let team1logo = `<img src="${"http://159.89.164.11:7000/"}/${team1.logo ? "logo.png" : "logo.png"}" class="w-40px view_team_table_images2 h-40px rounded-pill">`;
-                            let team2logo = `<img src="${"http://159.89.164.11:7000/"}/${team2.logo ? "logo.png"  : "logo.png" }" class="w-40px view_team_table_images2 h-40px rounded-pill">`;
+                            let team1logo = `<img src="${process.env.BASE_URL}/${team1.logo ?team1.logo: "logo.png"}" class="w-40px view_team_table_images2 h-40px rounded-pill">`;
+                            let team2logo = `<img src="${process.env.BASE_URL}/${team2.logo ? team2.logo: "logo.png" }" class="w-40px view_team_table_images2 h-40px rounded-pill">`;
+                            // let team1logo = `<img src="${"http://159.89.164.11:7000/"}/${team1.logo ? "logo.png" : "logo.png"}" class="w-40px view_team_table_images2 h-40px rounded-pill">`;
+                            // let team2logo = `<img src="${"http://159.89.164.11:7000/"}/${team2.logo ? "logo.png"  : "logo.png" }" class="w-40px view_team_table_images2 h-40px rounded-pill">`;
                             // https://api.DemoFantasy.com/api process.env.BASE_URL
                             let action = '';
                             let start_date_format = moment(index.start_date, 'YYYY-MM-DD hh:mm:ss').format('dddd, DD-MMM-YYYY, h:mm:ss a');
